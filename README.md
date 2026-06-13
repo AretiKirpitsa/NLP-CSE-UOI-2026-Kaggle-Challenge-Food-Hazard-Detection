@@ -2,7 +2,7 @@
 
 **Authors:** Nestor Moulias, Areti Kirpitsa
 
-This repository contains our submission to **SemEval-2025 Task 9, Subtask 1: The Food Hazard Detection Challenge**, a text classification task that jointly predicts the **hazard category** and **product category** of food-incident reports collected from the web. Our final system reached **Top 8** on the leaderboard with a score of **0.85205**.
+This repository contains our submission to **SemEval-2025 Task 9, Subtask 1: The Food Hazard Detection Challenge**, a text classification task that jointly predicts the **hazard category** and **product category** of food-incident reports collected from the web. Our final system reached **Top 8** on the kaggle leaderboard with a score of **0.85205**.
 
 The repository documents the full research progression, from a tuned classical baseline to a domain-aware transformer ensemble, so that each architectural decision can be reproduced and inspected independently.
 
@@ -10,13 +10,12 @@ The repository documents the full research progression, from a tuned classical b
 
 ## Final Result
 
-| System | Score |
-|---|---|
-| Final soft-voting ensemble (RoBERTa + AgriBERT + TF-IDF/LogReg) | **0.85205 (Top 8)** |
-| AgriBERT alone (OOF) | 0.7997 |
-| Madrid pipeline (AgriBERT + joint decoding, valid) | 0.76656 |
-| RoBERTa-base alone (OOF) | 0.7246 |
-| Tuned TF-IDF + Logistic Regression (OOF) | 0.6352 |
+| System | Private Score | Public Score |
+|---|---|---|
+| Final soft-voting ensemble (RoBERTa + AgriBERT + TF-IDF/LogReg) | **0.85205 (Top 8)** | 0.75998 |
+| Madrid pipeline (AgriBERT + joint decoding, valid) | 0.83521 | 0.77351 |
+| DeBERTa multi-seed Ensemble| 0.81519 | **0.77363** |
+| Tuned TF-IDF + Logistic Regression | 0.68891 | 0.61826 |
 
 The decisive ingredient was the inclusion of **AgriBERT** (`recobo/agriculture-bert-uncased`), a transformer pretrained on an agriculture-focused corpus whose vocabulary aligns closely with the lexical space of food-recall reports (crop names, agrochemicals, allergens, regulatory terminology).
 
