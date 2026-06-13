@@ -2,7 +2,7 @@
 
 **Authors:** Nestor Moulias, Areti Kirpitsa
 
-This repository contains our submission to the **SemEval Food Hazard Detection Challenge**, a text classification task that jointly predicts the **hazard category** and **product category** of food-incident reports collected from the web. Our final system reached **Top 8** on the leaderboard with a score of **0.85205**.
+This repository contains our submission to the **SemEval Food Hazard Detection Challenge**, a text classification task that jointly predicts the **hazard category** and **product category** of food-incident reports collected from the web. Our final system reached **Top 8** on the kaggle leaderboard with a score of **0.85205**.
 
 The repository documents the full research progression — from classical baselines to the final winning ensemble — so that each architectural decision can be reproduced and evaluated independently.
 
