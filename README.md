@@ -136,36 +136,6 @@ The final-ensemble notebook caches OOF and test probability arrays per backbone 
 
 ---
 
-## Key Configuration (Final Ensemble)
-
-| Hyperparameter | Value |
-|---|---|
-| Max sequence length | 256 |
-| Batch size | 16 |
-| Learning rate | 2e-5 |
-| Warmup ratio | 0.06 |
-| Optimizer | AdamW (weight decay 0.01) |
-| Folds | 5 (stratified on product class) |
-| Seeds | [42] (extendable to [42, 123, 777]) |
-| Input format | `[country] title text[:1000]` |
-
----
-
-## Citation
-
-If you use this work, please cite our paper:
-
-```bibtex
-@inproceedings{moulias_kirpitsa_2026,
-  title     = {Your paper title here},
-  author    = {Moulias, Nestor and Kirpitsa, Areti},
-  booktitle = {Proceedings of SemEval},
-  year      = {2026}
-}
-```
-
----
-
 ## Acknowledgments
 
 - The **AgriBERT** model by `recobo` ([Hugging Face](https://huggingface.co/recobo/agriculture-bert-uncased)) was central to our system's performance.
